@@ -1,0 +1,67 @@
+
+<div *ngIf="showtask">
+
+Todos :  {{result.name}}  
+
+<button (click)="showtask=false" style="background-color: rgb(234, 234, 10); float:right ;">Add task</button>
+<br>
+<br>
+<div style="border: solid 3px black ;">
+ <br>
+ <div  *ngFor="let t of result.tasks">
+    <br>
+ <div  style="border: solid 3px purple ;"> 
+   ID : <input name="id" [value]="t.userid" [(ngModel)]="t.userid"  type="text" > <br/>
+  Title :  <input name="title" [value]="t.title" [(ngModel)]="t.title"  type="text"> <br/>
+ Completed : <input name="completed" [value]="t.completed" [(ngModel)]="t.completed"  type="checkbox"><br/>    
+  <!-- ID: {{t.userid}} <br> -->
+ <!-- Title: {{t.title}} <br>
+ comleted: {{t.completed}}  -->
+  
+ <button (click)="updateproduct(t.userid,t)" style="background-color: burlywood; float:right ;" *ngIf="t.completed==false">Mark completed</button>
+</div> 
+ <br>
+ </div>
+
+</div>
+</div>
+
+<div *ngIf="!showtask"  style="border: solid 3px black ;">
+    Title : <input name="title2" [value]="tasksdata.title"  [(ngModel)]="tasksdata.title"   type="text" > <br/>
+   Completed : <input name="completed2"  [value]="tasksdata.completed"  [(ngModel)]="tasksdata.completed"   type="checkbox"> <br/>
+   Username : <input name="username"  [value]="tasksdata.username"  [(ngModel)]="tasksdata.username"  type="text"> <br/>
+<button (click)="addtask()" >Add</button><br>
+<button (click)="showtask=true" >Cancel</button>
+</div>
+
+
+<br><br><br>
+<div *ngIf="showpost">
+Posts :  {{result.name}}
+<button (click)="showpost=false" style="background-color: rgb(234, 234, 10); float:right ;">Add post</button>
+<br>
+<br>
+<div style="border: solid 3px black ;">
+   
+    <br>
+    <div  *ngFor="let p of result.posts">
+       <br>
+     <div style="border: solid 3px purple ;"> 
+    Title : {{p.title}} <br>
+    body : {{p.body}}
+   </div> 
+    <br>
+    </div>
+   </div>
+
+</div>
+
+<div *ngIf="!showpost"  style="border: solid 3px black ;">
+   Title : <input name="posttitle" [value]="postsdata.title"  [(ngModel)]="postsdata.title"   type="text" > <br/>
+   Body : <input name="body"  [value]="postsdata.body"  [(ngModel)]="postsdata.body"   type="text"> <br/>
+   Username : <input name="username"  [value]="postsdata.username"  [(ngModel)]="postsdata.username"  type="text"> <br/>
+<button (click)="addpost()" >Add</button><br>
+<button (click)="showpost=true" >Cancel</button>
+
+</div>
+

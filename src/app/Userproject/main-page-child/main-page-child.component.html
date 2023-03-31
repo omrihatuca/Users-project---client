@@ -1,0 +1,31 @@
+ <br><br>
+
+ <div [ngClass]=" taskcomleted ? 'green' : 'red' " > 
+    <br>
+   <form [ngClass]="chamgecbackground? 'pink' : '' ">
+     ID :  <a routerLink="" (click)="chamgecbackground=!chamgecbackground" (click)=" showdetailes()">{{users.id}}</a> <br><br>
+    Name : <input name="name" [value]="users.name" [(ngModel)]="users.name"  type="text" > <br/>
+    Username : <input name="username" [value]="users.username" [(ngModel)]="users.username"  type="text"> <br/>
+    Email : <input name="email" [value]="users.email" [(ngModel)]="users.email"  type="text"> <br/>
+    <br><br>
+    <button (mouseover)="changevalue=true" (mouseout)="changevalue=false">Other data</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button (click)="updateuser()">Update</button>
+    &nbsp;&nbsp;
+    <button (click)=" deleteuser()">Delete</button>
+    <br><br>
+    <div *ngIf="changevalue" class="gray">
+Street : <input name="street" [value]="users.street" [(ngModel)]="users.street"  type="text"> <br/>
+City : <input name="City" [value]="users.city" [(ngModel)]="users.city"  type="text"> <br/>
+ Zipcode : <input name="zipcode" [value]="users.zipcode" [(ngModel)]="users.zipcode"  type="text"> <br/> 
+    </div>
+    <br><br>
+</form>
+</div>
+         
+
+
+
+<br>
+<br> 
+

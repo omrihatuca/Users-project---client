@@ -1,0 +1,16 @@
+<div  style="width: 50%; float:right ; position:absolute;top:300px;right:25px;padding:10px;" >
+    <h4>Add New User</h4>
+    <div  style="border: solid 3px black ;">
+<form>
+    <br/>
+    &nbsp;&nbsp;&nbsp;   Name : <input name="name" [value]="userdata.name" [(ngModel)]="userdata.name"  type="text" > <br/><br/>
+    &nbsp;&nbsp;&nbsp;  Username : <input name="username" [value]="userdata.username" [(ngModel)]="userdata.username"  type="text" > <br/><br/>
+    &nbsp;&nbsp;&nbsp;   Email : <input name="email" [value]="userdata.email" [(ngModel)]="userdata.email"  type="text" > <br/><br/>
+    &nbsp;&nbsp;&nbsp;   Street : <input name="street" [value]="userdata.street" [(ngModel)]="userdata.street"  type="text" > <br/><br/>
+    &nbsp;&nbsp;&nbsp;  City : <input name="city" [value]="userdata.city" [(ngModel)]="userdata.city"  type="text" > <br/><br/>
+    &nbsp;&nbsp;&nbsp; Zipcode : <input name="name" [value]="userdata.zipcode" [(ngModel)]="userdata.zipcode"  type="text" > <br/><br/>
+<button (click)="Adduser()" style="background-color: rgb(119, 201, 43); float:right ;" >Add</button>
+</form>
+</div>
+<br/><br/>
+</div>

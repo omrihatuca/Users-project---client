@@ -1,0 +1,21 @@
+Sarch :  <input type="text" #txt (keyup)="filterbyname(txt.value)">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="sendtoadduser()" style="background-color: burlywood;">Add</button>
+
+
+
+<app-main-page-child [userid]="us.id" *ngFor="let us of users" (senddata)="search=$event"  ></app-main-page-child>
+
+ <div  style="width: 50%; float:right ;  position:absolute;top:25px;right:25px;padding:10px;"   >
+<div >
+ <app-page2 [result]="search" ></app-page2> 
+<br><br>
+</div>
+
+</div> 
+
+<router-outlet>
+
+</router-outlet>
+
+
