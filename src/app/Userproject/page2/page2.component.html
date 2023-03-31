@@ -14,9 +14,7 @@ Todos :  {{result.name}}
    ID : <input name="id" [value]="t.userid" [(ngModel)]="t.userid"  type="text" > <br/>
   Title :  <input name="title" [value]="t.title" [(ngModel)]="t.title"  type="text"> <br/>
  Completed : <input name="completed" [value]="t.completed" [(ngModel)]="t.completed"  type="checkbox"><br/>    
-  <!-- ID: {{t.userid}} <br> -->
- <!-- Title: {{t.title}} <br>
- comleted: {{t.completed}}  -->
+  
   
  <button (click)="updateproduct(t.userid,t)" style="background-color: burlywood; float:right ;" *ngIf="t.completed==false">Mark completed</button>
 </div> 
