@@ -18,7 +18,7 @@ postsdata : any = {}
 
 alltasks : any = []
 
-// info : any = {}
+
 
  infocomp : boolean = true
 
@@ -67,21 +67,7 @@ addpost()
 
 ngOnInit() : void
 {
-  //  this.srv.getdatafromtasks().subscribe
-  //  ((data : any)=>
-  //  {
-
-  //    for (let i = 0; i < data.length; i++)
-  //     {
-      
-  //     this.info = data[i]
-  //     console.log(this.info)
-  //    this.infocomp = this.info.completed;
-  //      console.log(this.infocomp)
-  //    }
-     
   
-  //  })
    
  }
 
