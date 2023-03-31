@@ -43,15 +43,11 @@ else
 this.showinfo = !this.showinfo
 sessionStorage["show"]=this.showinfo
 
-    // if (this.taskcomleted==false)
-    //  {
-    //   console.log(this.taskid)
-    //   sessionStorage["taskid"]=this.taskid
-    // }
+   
 
     sessionStorage["userid"]=this.userid
    
-    // this.rout.navigate(["/page2"]);
+    
   }
 
 
@@ -92,14 +88,14 @@ for (let i = 0; i < data.length; i++)
  {
 this.users=data[i]
 
-  // console.log(this.users)
+  
   
 for (let i = 0; i < this.users.tasks.length; i++) 
 {
   this.tasks=this.users.tasks[i]
    this.taskcomleted = this.tasks.completed
   
-  //  console.log(this.taskcomleted)
+  
   
 }
 
